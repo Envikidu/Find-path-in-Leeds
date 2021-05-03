@@ -1,0 +1,4 @@
+set xrange [-1.564000:-1.543100]
+set yrange [53.801600:53.811000]
+plot "map_data.dat" with linespoint
+plot "path.dat" with linespoint linecolor 3 linewidth 2
