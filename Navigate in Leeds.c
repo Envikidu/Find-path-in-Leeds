@@ -15,6 +15,16 @@ int pre[100010];
 int path_len=0;
 int path[100010];
 
+void add(int x,int y,double z) 
+{
+	ver[++tot] = y;
+	edge[tot] = z;
+	next[tot] = head[x];
+	head[x] = tot;
+	//printf("%f\n",edge[tot]);
+}
+
+
 void pop()
 {
 	int i;
@@ -165,43 +175,6 @@ void push(APQ x)
 
 
 
-/*int main()
-{
-	scanf("%d",&sz);
-	int i;
-	for(i=1;i<=sz;i++)
-	{
-		scanf("%lf",&list[i]);
-	}
-	
-	heap_sort(list,sz);
-	
-	
-	for(i=1;i<=sz;i++)
-    {
-    	printf("%lf ",out[i]);
-	}
-	
-	push(5);
-	
-	printf("\n");
-	
-	for(i=1;i<=sz;i++)
-    {
-    	printf("%lf ",out[i]);
-	}
-	
-	pop();
-	
-	printf("\n");
-	for(i=1;i<=sz;i++)
-    {
-    	printf("%lf ",out[i]);
-	}
-	
-	return 0;
-}*/
-
 
 //编号从1开始1的小根堆 
 void dijkstra() 
@@ -213,10 +186,7 @@ void dijkstra()
 	}
 	memset(v,0,sizeof(v)); 
 	d[start_point]=0;  //距离起点距离初始化为0 
-	/*for(y=0;y<10;y++)
-	{
-		printf("%f\n",d[y]);
-	}*/
+	
 	
 	APQ first;  //起始点初始化 
 	first.dist=0;
@@ -224,38 +194,13 @@ void dijkstra()
 	
 	push(first);  //把起始点加入堆 
 	
-	//printf("%d\n\n",out[1].node_id);
-	/*int w;
-	for(w=1;w<=10;w++)
-	{
-		printf("%d\n",list[w].node_id);
-		printf("%d\n",out[w].node_id);
-	}*/
+	
 	
 	while (sz!=0) 
 	{
 		
 		int x = out[1].node_id; //堆顶的元素 最近节点的编号 
 		pop();
-		
-		//printf("%d\n\n",x);
-		
-		
-		
-		/*int w;
-		for(w=1;w<=10;w++)
-		{
-			printf("%d\n",list[w].node_id);
-			
-		}
-		printf("\n");
-		
-		for(w=1;w<=10;w++)
-		{
-			printf("%d\n",out[w].node_id);
-		}*/
-		
-		
 		
 		
 		
@@ -289,7 +234,7 @@ void dijkstra()
 	return;
 }
 
-
+/*
 int main()
 {
 	int o;
@@ -309,20 +254,8 @@ int main()
 		pre[o]=-1;
 	}
 	
-	get_map();
-	/*int jj;
-	for(jj=1;jj<=100;jj++)
-	{
-		printf("%f\n",edge[jj]);
-	}*/
-	//printf("%lld %lld\n",node_collection[2].node_id,node_collection[3].node_id);
-	//printf("%f %f %f %f\n",length_temp[1],length_temp[2],length_temp[3],length_temp[4]);
-	/*int p=0;
-	for(p;p<50;p++)
-	{
-		//printf("%lld %f %f\n", node_collection[p].node_id, node_collection[p].lat, node_collection[p].lon);
-		
-	}*/
+	/*get_map();
+
 	
 	printf("Please enter the ID you want to start:");
 	scanf("%d",&start_point);
@@ -337,7 +270,7 @@ int main()
 		for(h=0;h<100;h++)
 		{
 			printf("%f\n",d[h]);
-		}*/
+		}
 		int p;
 		for(p=1;p<=1000;p++)
 		{
@@ -380,11 +313,12 @@ int main()
 			//printf("%lld %f %f\n",node_collection[p].node_id,node_collection[p].lat,node_collection[p].lon);
 			//printf("%f\n",d[p]);
 			printf("%f\n",d[p]);
-		}*/
-	}
+		}
+		
+	}*/
 	
-	return 0;
+	//return 0;
 	
 	
 	 
-}
+//}
