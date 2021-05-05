@@ -20,7 +20,7 @@ void add(int x,int y,double z)
 	head[x] = tot;
 	//printf("%f\n",edge[tot]);
 }
-
+/*
 void get_map()
 {
 	int LEN=2000;
