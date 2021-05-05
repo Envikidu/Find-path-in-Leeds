@@ -52,14 +52,6 @@ APQ apq[9999];
 APQ list[100010];  //优先队列预处理数组（节点编号） 
 APQ out[100010];   //有序的优先队列数组（节点编号） 
 
-void adjust_down(APQ a[],int father,int n);
-void build_max_heap(APQ a[],int n);
-void heap_sort(APQ a[], int n);
-void push(APQ x);
-void pop();
-void dijkstra();
-void add(int x,int y,double z); 
-
 
 
 

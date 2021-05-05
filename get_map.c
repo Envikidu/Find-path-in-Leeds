@@ -20,7 +20,7 @@ void add(int x,int y,double z)
 	head[x] = tot;
 	//printf("%f\n",edge[tot]);
 }
-/*
+
 void get_map()
 {
 	int LEN=2000;
@@ -60,7 +60,7 @@ void get_map()
 	
 	
 	FILE *kp;
-	kp=fopen("map_data.txt","w");
+	kp=fopen("map_data.dat","w");
 	for(i=1;i<=2344;i++)   //遍历所有邻接表临时节点组 
 	{
 		int j;
